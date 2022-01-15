@@ -11,3 +11,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 -- [Godot Engine](https://godotengine.org)
 
+# License of this game itself
+
+[Find Billy!](https://codeberg.org/papojari/Find-Billy) is a 2 dimensional Pixel Art Jump & Run. Your mission is it to find Billy!
+Copyright (C) 2022 [papojari](https://codeberg.page/papojari)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
