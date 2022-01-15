@@ -41,3 +41,21 @@ pipeline:
       - ls godot-build
     when:
       event: tag
+  changelog:
+    image: quay.io/git-chglog/git-chglog:latest
+    secrets: [ token ]
+    commands:
+      # clone repository
+      - git clone https://"$${TOKEN}"@codeberg.org/${CI_REPO_OWNER}/${CI_REPO_NAME}.git /${CI_REPO_NAME}
+      - cd /${CI_REPO_NAME}
+      # generate changelog
+      - git-chglog > CHANGELOG.md
+      # configure git
+      - git config --global user.email "mail@ci.codeberg.org"
+      - git config --global user.name "Codeberg CI"
+      # deploy changelog
+      - git add CHANGELOG.md
+      - >
+        git commit -m 'docs(changelog): update' ; git push
+    when:
+      event: tag
