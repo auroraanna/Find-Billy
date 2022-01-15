@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2022 papojari -->
+<!-- Copyright 2007-2021 Juan Linietsky, Ariel Manzur. Copyright © 2014-2021 Godot Engine contributors. -->
+<component type="desktop-application">
+	<id>page.codeberg.papojari.Find_Billy</id>
+	<name>Find Billy!</name>
+	<summary>A pixel art 2d platformer game.</summary>
+	<description>
+		<p>A 2 dimensional Pixel Art Jump &amp; Run. Your mission is it to find Billy!</p>
+	</description>
+	<launchable type="desktop-id">page.codeberg.papojari.Find_Billy.desktop</launchable>
+	<content_rating type="oars-1.1">
+		<content_attribute id="violence-cartoon">mild</content_attribute>
+		<content_attribute id="violence-fantasy">mild</content_attribute>
+	</content_rating>
+	<url type="homepage">https://codeberg.org/papojari/Find-Billy</url>
+	<metadata_license>FSFAP</metadata_license>
+	<project_license>GPL-3.0-or-later</project_license>
+	<developer_name>papojari</developer_name>
+	<screenshots>
+		<screenshot type="default">
+			<caption>Dinonuggy surrounded by kitchen utensils</caption>
+			<image type="thumbnail" width="2090" height="1333">https://codeberg.org/papojari/Find-Billy/raw/branch/main/thumbnail.png</image>
+		</screenshot>
+	</screenshots>
+	<releases>
+		<release version="0.28.0" date="2022-01-15">
+			<url>https://codeberg.org/papojari/Find-Billy/releases/tag/v0.28.0</url>
+		</release>
+	</releases>
+</component>
