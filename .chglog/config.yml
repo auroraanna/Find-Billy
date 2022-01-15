@@ -1,0 +1,42 @@
+style: gitlab
+template: CHANGELOG.tpl.md
+info:
+  title: CHANGELOG
+  repository_url: https://codeberg.org/CoEck/Dinonuggys-Journey
+options:
+  commits:
+    filters:
+      Type:
+         - feat
+         - fix
+         - perf
+         - refactor
+         - docs
+         - ci
+         - git
+         - chore
+         - rename
+         - move
+         - delete
+  commit_groups:
+     title_maps:
+       feat: Features
+       fix: Bug Fixes
+       perf: Performance Improvements
+       refactor: Refactoring
+       docs: Documentation
+       ci: Continuous Integration
+       git: Git version control
+       chore: Chore
+       rename: Rename
+       move: Move
+       delete: Delete
+  header:
+    pattern: "^(\\w*)(?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
+    pattern_maps:
+      - Type
+      - Scope
+      - Subject
+  notes:
+    keywords:
+      - BREAKING CHANGE
