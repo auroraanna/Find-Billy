@@ -33,3 +33,11 @@ pipeline:
       - ls godot-build
     when:
       event: tag
+  godot-build-linux-pack:
+    image: barichello/godot-ci
+    commands:
+      - mkdir -v -p godot-build
+      - godot -v --export-pack "Linux/X11" godot-build/godot-runner.pck
+      - ls godot-build
+    when:
+      event: tag
