@@ -1,4 +1,59 @@
 
+<a name="v0.31.0"></a>
+## [v0.31.0](https://codeberg.org/papojari/Find-Billy/compare/v0.30.0...v0.31.0)
+
+> 2022-01-16
+
+### Documentation
+
+* add .desktop file
+* **appdata:** update releases
+
+
+<a name="v0.30.0"></a>
+## [v0.30.0](https://codeberg.org/papojari/Find-Billy/compare/v0.29.2...v0.30.0)
+
+> 2022-01-16
+
+### Documentation
+
+* add appdata
+
+
+<a name="v0.29.2"></a>
+## [v0.29.2](https://codeberg.org/papojari/Find-Billy/compare/v0.29.1...v0.29.2)
+
+> 2022-01-16
+
+### Bug Fixes
+
+* **models:** remove unnescessary script for nope sign
+
+
+<a name="v0.29.1"></a>
+## [v0.29.1](https://codeberg.org/papojari/Find-Billy/compare/v0.29.0...v0.29.1)
+
+> 2022-01-16
+
+### Bug Fixes
+
+* **boot:** fix boot splash url
+
+
+<a name="v0.29.0"></a>
+## [v0.29.0](https://codeberg.org/papojari/Find-Billy/compare/v0.28.0...v0.29.0)
+
+> 2022-01-16
+
+### Documentation
+
+* **changelog:** update
+
+### Features
+
+* **export:** add icon in different sizes
+
+
 <a name="v0.28.0"></a>
 ## [v0.28.0](https://codeberg.org/papojari/Find-Billy/compare/v0.27.0...v0.28.0)
 
