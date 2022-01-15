@@ -14,7 +14,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 # License of this game itself
 
 [Find Billy!](https://codeberg.org/papojari/Find-Billy) is a 2 dimensional Pixel Art Jump & Run. Your mission is it to find Billy!
-Copyright (C) 2022 [papojari](https://codeberg.page/papojari)
+Copyright (C) 2022 [papojari](https://papojari.codeberg.page/)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
