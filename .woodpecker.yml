@@ -1,0 +1,9 @@
+pipeline:
+  godot-build-linux:
+    image: barichello/godot-ci
+    commands:
+      - mkdir -v -p godot-build
+      - godot -v --export "Linux/X11" godot-build/Find\ Billy\ for\ Linux\ ${CI_COMMIT_TAG}.x86_64
+      - ls godot-build
+    when:
+      event: tag
