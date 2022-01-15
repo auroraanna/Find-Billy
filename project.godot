@@ -20,9 +20,9 @@ run/main_scene="res://levels/main.tscn"
 boot_splash/image="res://icons/FIND BILLY bold text.png"
 boot_splash/use_filter=false
 boot_splash/bg_color=Color( 0.196078, 0.368627, 0.733333, 1 )
-config/icon="res://icons/icon.png"
-config/macos_native_icon="res://icons/icon.icns"
-config/windows_native_icon="res://icons/icon.ico"
+config/icon="res://brand/icon/default.png"
+config/macos_native_icon="res://brand/icon/icon.icns"
+config/windows_native_icon="res://brand/icon/icon.ico"
 
 [audio]
 
