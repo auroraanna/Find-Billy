@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/get_hexagoned.ogg-6c720274f684bbede5e0171983254516.oggstr"
+
+[deps]
+
+source_file="res://music/get_hexagoned.ogg"
+dest_files=[ "res://.import/get_hexagoned.ogg-6c720274f684bbede5e0171983254516.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
