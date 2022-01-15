@@ -23,3 +23,13 @@ pipeline:
       - ls godot-build
     when:
       event: tag
+  godot-build-web:
+    image: barichello/godot-ci
+    commands:
+      - mkdir -v -p godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}
+      - godot -v --export "HTML5" godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/index.html
+      - zip godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}.zip godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/*
+      - rm -rf godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}
+      - ls godot-build
+    when:
+      event: tag
