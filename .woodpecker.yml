@@ -7,3 +7,11 @@ pipeline:
       - ls godot-build
     when:
       event: tag
+  godot-build-windows:
+    image: barichello/godot-ci
+    commands:
+      - mkdir -v -p godot-build
+      - godot -v --export "Windows Desktop" godot-build/Find\ Billy\ for\ Windows\ ${CI_COMMIT_TAG}.exe
+      - ls godot-build
+    when:
+      event: tag
