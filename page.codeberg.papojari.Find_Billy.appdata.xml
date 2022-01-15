@@ -24,6 +24,9 @@
 		</screenshot>
 	</screenshots>
 	<releases>
+		<release version="0.31.0" date="2022-01-15">
+			<url>https://codeberg.org/papojari/Find-Billy/releases/tag/v0.31.0</url>
+		</release>
 		<release version="0.28.0" date="2022-01-15">
 			<url>https://codeberg.org/papojari/Find-Billy/releases/tag/v0.28.0</url>
 		</release>
