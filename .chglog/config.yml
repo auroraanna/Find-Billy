@@ -2,7 +2,7 @@ style: gitlab
 template: CHANGELOG.tpl.md
 info:
   title: CHANGELOG
-  repository_url: https://codeberg.org/CoEck/Dinonuggys-Journey
+  repository_url: https://codeberg.org/papojari/Find-Billy
 options:
   commits:
     filters:
