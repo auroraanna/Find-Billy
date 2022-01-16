@@ -1,4 +1,18 @@
 
+<a name="v0.31.1"></a>
+## [v0.31.1](https://codeberg.org/papojari/Find-Billy/compare/v0.31.0...v0.31.1)
+
+> 2022-01-16
+
+### Bug Fixes
+
+* **models:** fix nope sign's missing dependency
+
+### Documentation
+
+* **appdata:** update releases
+
+
 <a name="v0.31.0"></a>
 ## [v0.31.0](https://codeberg.org/papojari/Find-Billy/compare/v0.30.0...v0.31.0)
 
