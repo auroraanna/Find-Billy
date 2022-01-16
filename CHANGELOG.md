@@ -11,6 +11,7 @@
 ### Documentation
 
 * **appdata:** update releases
+* **changelog:** update
 
 
 <a name="v0.31.0"></a>
