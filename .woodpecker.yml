@@ -86,7 +86,9 @@ pipeline:
       - git clone https://"$${TOKEN}"@codeberg.org/${CI_REPO_OWNER}/pages.git /pages
       # unzip web version
       - unzip godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}.zip -d godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/
-      - rsync -r --delete --exclude-from=".rsyncignore" godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/ /pages/find-billy/
+      - cd godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/
+      - mv index.html game.html
+      - rsync -r --delete --exclude-from="../../../../.rsyncignore" * /pages/find-billy/
       # configure git
       - git config --global user.email "mail@ci.codeberg.org"
       - git config --global user.name "Codeberg CI"
