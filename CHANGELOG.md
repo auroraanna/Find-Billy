@@ -1,4 +1,44 @@
 
+<a name="v0.33.0"></a>
+## [v0.33.0](https://codeberg.org/papojari/Find-Billy/compare/v0.32.1...v0.33.0)
+
+> 2022-01-16
+
+### Documentation
+
+* **readme:** add instructions on how to play the game
+
+
+<a name="v0.32.1"></a>
+## [v0.32.1](https://codeberg.org/papojari/Find-Billy/compare/v0.32.0...v0.32.1)
+
+> 2022-01-16
+
+### Continuous Integration
+
+* **woodpecker_deploy-web:** fix unzipping the web version
+
+### Documentation
+
+* **appdata:** update releases
+
+
+<a name="v0.32.0"></a>
+## [v0.32.0](https://codeberg.org/papojari/Find-Billy/compare/v0.31.1...v0.32.0)
+
+> 2022-01-16
+
+### Continuous Integration
+
+* add woodpecker_deploy-web stage to deploy web version to https://papojari.codeberg.page
+
+### Documentation
+
+* **appdata:** update releases
+* **changelog:** update
+* **changelog:** update
+
+
 <a name="v0.31.1"></a>
 ## [v0.31.1](https://codeberg.org/papojari/Find-Billy/compare/v0.31.0...v0.31.1)
 
