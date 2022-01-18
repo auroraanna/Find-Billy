@@ -1,4 +1,58 @@
 
+<a name="v0.34.3"></a>
+## [v0.34.3](https://codeberg.org/papojari/Find-Billy/compare/v0.34.2...v0.34.3)
+
+> 2022-01-18
+
+### Continuous Integration
+
+* **woodpecker_appdata-releases-update:** fix commit message
+
+
+<a name="v0.34.2"></a>
+## [v0.34.2](https://codeberg.org/papojari/Find-Billy/compare/v0.34.1...v0.34.2)
+
+> 2022-01-18
+
+### Continuous Integration
+
+* **woodpecker_appdata-releases-update:** fix formatting
+
+
+<a name="v0.34.1"></a>
+## [v0.34.1](https://codeberg.org/papojari/Find-Billy/compare/v0.34.0...v0.34.1)
+
+> 2022-01-18
+
+### Continuous Integration
+
+* **woodpecker_appdata-releases-update:** add missing dependency
+
+
+<a name="v0.34.0"></a>
+## [v0.34.0](https://codeberg.org/papojari/Find-Billy/compare/v0.33.1...v0.34.0)
+
+> 2022-01-18
+
+### Continuous Integration
+
+* add woodpecker_appdata-releases-update stage to update the <releases> in appdata
+
+
+<a name="v0.33.1"></a>
+## [v0.33.1](https://codeberg.org/papojari/Find-Billy/compare/v0.33.0...v0.33.1)
+
+> 2022-01-18
+
+### Continuous Integration
+
+* ***:** add newline add end of config
+
+### Documentation
+
+* **changelog:** update
+
+
 <a name="v0.33.0"></a>
 ## [v0.33.0](https://codeberg.org/papojari/Find-Billy/compare/v0.32.1...v0.33.0)
 
