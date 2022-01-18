@@ -84,7 +84,7 @@ pipeline:
       # deploy
       - git add page.codeberg.papojari.Find_Billy.appdata.xml
       - >
-        git commit -m 'docs(changelog): update' ; git push
+        git commit -m 'docs(appdata): update releases' ; git push
     when:
       event: tag
   gitea-release:
