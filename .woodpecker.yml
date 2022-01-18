@@ -60,9 +60,11 @@ pipeline:
     when:
       event: tag
   appdata-releases-update:
-    image: whyellow/xmlstarlet
+    image: alpine
     secrets: [ token ]
     commands:
+      # install dependencies
+      - apk add git xmlstarlet
       # clone repository
       - git clone https://"$${TOKEN}"@codeberg.org/${CI_REPO_OWNER}/${CI_REPO_NAME}.git /${CI_REPO_NAME}
       - cd /${CI_REPO_NAME}
