@@ -58,6 +58,8 @@ Run
 page.codeberg.papojari.Find_Billy
 ```
 
+## [Speedruns](speedruns.md)
+
 ## Credits
 
 ### Bosca Ceoil
