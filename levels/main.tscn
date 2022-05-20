@@ -25,21 +25,27 @@ position = Vector2( -304, -88 )
 [node name="BilleWasALieSign" parent="." instance=ExtResource( 7 )]
 
 [node name="WindTurbine" parent="." instance=ExtResource( 10 )]
+frame = 1
 
 [node name="WindTurbine2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 184, -432 )
+frame = 1
 
 [node name="WindTurbine3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 568, -208 )
+frame = 1
 
 [node name="WindTurbine4" parent="." instance=ExtResource( 10 )]
 position = Vector2( 616, -1888 )
+frame = 1
 
 [node name="WindTurbine5" parent="." instance=ExtResource( 10 )]
 position = Vector2( -152, -560 )
+frame = 1
 
 [node name="WindTurbine6" parent="." instance=ExtResource( 10 )]
 position = Vector2( 488, -1280 )
+frame = 1
 
 [node name="FlowerRed" parent="." instance=ExtResource( 6 )]
 
@@ -51,6 +57,8 @@ tile_data = PoolIntArray( -8060936, 1, 0, -8060935, 1, 1, -8060934, 1, 1, -80609
 
 [node name="Robert" parent="." instance=ExtResource( 8 )]
 position = Vector2( -88, 144 )
+collision_layer = 5
+collision_mask = 3
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
@@ -58,30 +66,39 @@ volume_db = -9.087
 autoplay = true
 
 [node name="Propellor" parent="." instance=ExtResource( 2 )]
+frame = 0
 
 [node name="Propellor2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 312, -72 )
+frame = 0
 
 [node name="Propellor4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 136, -88 )
+frame = 0
 
 [node name="Propellor3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 296, -216 )
+frame = 0
 
 [node name="Propellor5" parent="." instance=ExtResource( 2 )]
 position = Vector2( 184, -376 )
+frame = 0
 
 [node name="Propellor6" parent="." instance=ExtResource( 2 )]
 position = Vector2( 632, -440 )
+frame = 0
 
 [node name="Propellor7" parent="." instance=ExtResource( 2 )]
 position = Vector2( 536, -696 )
+frame = 0
 
 [node name="Propellor8" parent="." instance=ExtResource( 2 )]
 position = Vector2( 488, -712 )
+frame = 0
 
 [node name="WindTurbine7" parent="." instance=ExtResource( 10 )]
 position = Vector2( 919.554, -1888 )
+frame = 1
 
 [node name="SolarPanel" parent="." instance=ExtResource( 12 )]
 position = Vector2( 392, 104 )
@@ -146,31 +163,31 @@ position = Vector2( 808, -1816 )
 position = Vector2( 408, 136 )
 
 [node name="NuclearReactor" parent="." instance=ExtResource( 11 )]
-frame = 5
+frame = 0
 
 [node name="NuclearReactor2" parent="." instance=ExtResource( 11 )]
 position = Vector2( 632, -480 )
-frame = 6
+frame = 1
 
 [node name="NuclearReactor3" parent="." instance=ExtResource( 11 )]
 position = Vector2( 520, -1872 )
-frame = 8
 
 [node name="NuclearReactor6" parent="." instance=ExtResource( 11 )]
 position = Vector2( 152, -1312 )
-frame = 6
+frame = 1
 
 [node name="NuclearReactor8" parent="." instance=ExtResource( 11 )]
 position = Vector2( -184, -96 )
-frame = 1
+frame = 8
 
 [node name="NuclearReactor7" parent="." instance=ExtResource( 11 )]
 position = Vector2( -168, -96 )
-frame = 9
+frame = 4
 
 [node name="Finish" type="Area2D" parent="."]
 position = Vector2( 752, -1808 )
 collision_layer = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
 shape = SubResource( 70 )

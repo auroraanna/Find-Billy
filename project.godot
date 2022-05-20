@@ -28,6 +28,10 @@ config/windows_native_icon="res://brand/icon/icon.ico"
 
 driver="Pipewire"
 
+[autoload]
+
+global="*res://global.gd"
+
 [display]
 
 window/size/width=320

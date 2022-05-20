@@ -46,3 +46,9 @@ func _physics_process(delta):
 func _input(event):
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()
+		global.robert_finished = false
+		global.robert_time = 0
+
+func _on_Finish_body_entered(body):
+	global.robert_finished = true
+
