@@ -1,4 +1,35 @@
 
+<a name="v0.35.0"></a>
+## [v0.35.0](https://codeberg.org/papojari/Find-Billy/compare/v0.34.4...v0.35.0)
+
+> 2022-05-20
+
+### Bug Fixes
+
+* fix something with the controller input
+* go back to fullscreen because the window can't be resized and it's way to small by default
+* fix unsharp and too big keyboard shortcuts menu option by adding a theme
+
+### Features
+
+* stop the time when Robert crosses the finish line and make counting the time more accurate
+
+
+<a name="v0.34.4"></a>
+## [v0.34.4](https://codeberg.org/papojari/Find-Billy/compare/v0.34.3...v0.34.4)
+
+> 2022-03-19
+
+### Continuous Integration
+
+* **woodpecker_deploy-web:** update according to new website
+
+### Documentation
+
+* **appdata:** update releases
+* **changelog:** update
+
+
 <a name="v0.34.3"></a>
 ## [v0.34.3](https://codeberg.org/papojari/Find-Billy/compare/v0.34.2...v0.34.3)
 
