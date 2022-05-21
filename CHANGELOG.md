@@ -1,4 +1,19 @@
 
+<a name="v0.99.0"></a>
+## [v0.99.0](https://codeberg.org/papojari/Find-Billy/compare/v0.35.0...v0.99.0)
+
+> 2022-05-21
+
+### Bug Fixes
+
+* remove commented code in stopwatch script
+
+### Documentation
+
+* **appdata:** update releases
+* **changelog:** update
+
+
 <a name="v0.35.0"></a>
 ## [v0.35.0](https://codeberg.org/papojari/Find-Billy/compare/v0.34.4...v0.35.0)
 
