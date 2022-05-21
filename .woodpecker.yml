@@ -1,4 +1,15 @@
 pipeline:
+  build-icons:
+    image: alpine
+    commands:
+      - apk add just
+      - just alpine-install-deps
+      - just build-icons
+  archive-icons:
+    image: alpine
+    commands:
+      - apk add tar
+      - tar czf icons.tar.gz --directory=build icons
   godot-build-linux:
     image: barichello/godot-ci
     commands:
@@ -50,6 +61,7 @@ pipeline:
       base_url: https://codeberg.org
       files:
         - godot-build/*
+        - icons.tar.gz
       checksum:
         - sha256
         - sha512

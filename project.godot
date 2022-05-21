@@ -20,9 +20,9 @@ run/main_scene="res://levels/main.tscn"
 boot_splash/image="res://brand/banner.png"
 boot_splash/use_filter=false
 boot_splash/bg_color=Color( 0.196078, 0.368627, 0.733333, 1 )
-config/icon="res://brand/icon/default.png"
-config/macos_native_icon="res://brand/icon/icon.icns"
-config/windows_native_icon="res://brand/icon/icon.ico"
+config/icon="res://build/icons/usr/share/icons/hicolor/128x128/apps/find-billy.png"
+config/macos_native_icon="res://build/icons/usr/share/icons/hicolor/128x128/apps/find-billy.icns"
+config/windows_native_icon="res://build/icons/usr/share/icons/hicolor/128x128/apps/find-billy.ico"
 
 [audio]
 

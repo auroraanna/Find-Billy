@@ -1,6 +1,9 @@
 #!/usr/bin/env just --justfile
-alpine_deps:='git xmlstarlet'
-nixpkgs_deps:='git xmlstarlet'
+name:='find-billy'
+build_dir:='./build'
+build_icons_dir:=build_dir+'/icons'
+alpine_deps:='git xmlstarlet imagemagick inkscape'
+nixpkgs_deps:='git xmlstarlet imagemagick inkscape'
 version:='0.1.0'
 
 # By default, recipes are only listed.
@@ -33,6 +36,22 @@ nix-uninstall-deps:
 	for package_name in {{nixpkgs_deps}}; do
 		nix-env -e $package_name
 	done
+
+# Generate several icon sizes and formats from one icon.
+build-icons:
+	#!/bin/sh
+	set -euxo pipefail
+	# Clear {{build_icons_dir}}
+	mkdir -p {{build_icons_dir}}
+	rm -rf {{build_icons_dir}}
+	# Icons
+	mkdir -p {{build_icons_dir}}/usr/share/icons/hicolor
+	for icon_width in 128 144 180 192 432 512; do
+		mkdir -p {{build_icons_dir}}/usr/share/icons/hicolor/$icon_width"x"$icon_width/apps
+		inkscape -o {{build_icons_dir}}/usr/share/icons/hicolor/$icon_width"x"$icon_width/apps/{{name}}.png -C -w $icon_width -h $icon_width --export-png-color-mode=RGBA_8 brand/icon.svg
+	done
+	convert {{build_icons_dir}}/usr/share/icons/hicolor/128x128/apps/{{name}}.png {{build_icons_dir}}/usr/share/icons/hicolor/128x128/apps/{{name}}.ico
+	convert {{build_icons_dir}}/usr/share/icons/hicolor/128x128/apps/{{name}}.png {{build_icons_dir}}/usr/share/icons/hicolor/128x128/apps/{{name}}.icns
 
 changelog:
 	#!/bin/sh
