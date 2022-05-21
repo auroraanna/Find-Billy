@@ -41,52 +41,6 @@ pipeline:
       - ls godot-build
     when:
       event: tag
-  changelog:
-    image: quay.io/git-chglog/git-chglog:latest
-    secrets: [ token ]
-    commands:
-      # clone repository
-      - git clone https://"$${TOKEN}"@codeberg.org/${CI_REPO_OWNER}/${CI_REPO_NAME}.git /${CI_REPO_NAME}
-      - cd /${CI_REPO_NAME}
-      # generate changelog
-      - git-chglog > CHANGELOG.md
-      # configure git
-      - git config --global user.email "mail@ci.codeberg.org"
-      - git config --global user.name "Codeberg CI"
-      # deploy changelog
-      - git add CHANGELOG.md
-      - >
-        git commit -m 'docs(changelog): update' ; git push
-    when:
-      event: tag
-  appdata-releases-update:
-    image: alpine
-    secrets: [ token ]
-    commands:
-      # install dependencies
-      - apk add git xmlstarlet
-      # clone repository
-      - git clone https://"$${TOKEN}"@codeberg.org/${CI_REPO_OWNER}/${CI_REPO_NAME}.git /${CI_REPO_NAME}
-      - cd /${CI_REPO_NAME}
-      # update appdata <releases>
-      - head -1 page.codeberg.papojari.Find_Billy.appdata.xml > page.codeberg.papojari.Find_Billy.appdata.xml.tmp
-      - >
-        xmlstarlet edit --omit-decl
-        -s '//releases' -t elem -n "release"
-        -s '//releases/release[last()]' -t elem -n "url" -v "https://codeberg.org/papojari/Find-Billy/releases/tag/${CI_COMMIT_TAG}"
-        -s '//releases/release[last()]' -t attr -n "version" -v "${CI_COMMIT_TAG}"
-        -s '//releases/release[last()]' -t attr -n "date" -v "$(date -u +'%Y-%m-%d')"
-        page.codeberg.papojari.Find_Billy.appdata.xml >> page.codeberg.papojari.Find_Billy.appdata.xml.tmp
-      - mv page.codeberg.papojari.Find_Billy.appdata.xml.tmp page.codeberg.papojari.Find_Billy.appdata.xml
-      # configure git
-      - git config --global user.email "mail@ci.codeberg.org"
-      - git config --global user.name "Codeberg CI"
-      # deploy
-      - git add page.codeberg.papojari.Find_Billy.appdata.xml
-      - >
-        git commit -m 'docs(appdata): update releases' ; git push
-    when:
-      event: tag
   gitea-release:
     image: plugins/gitea-release
     secrets: [ gitea_token token ]
