@@ -24,6 +24,18 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="v0.37.0" date="2022-05-21">
+      <url>https://codeberg.org/papojari/Find-Billy/releases/tag/v0.37.0</url>
+    </release>
+    <release version="v0.36.0" date="2022-05-21">
+      <url>https://codeberg.org/papojari/Find-Billy/releases/tag/v0.36.0</url>
+    </release>
+    <release version="v0.35.0" date="2022-05-20">
+      <url>https://codeberg.org/papojari/Find-Billy/releases/tag/v0.35.0</url>
+    </release>
+    <release version="v0.34.3" date="2022-01-18">
+      <url>https://codeberg.org/papojari/Find-Billy/releases/tag/v0.34.3</url>
+    </release>
     <release version="0.32.1" date="2022-01-16">
       <url>https://codeberg.org/papojari/Find-Billy/releases/tag/v0.32.1</url>
     </release>
@@ -38,15 +50,6 @@
     </release>
     <release version="0.28.0" date="2022-01-15">
       <url>https://codeberg.org/papojari/Find-Billy/releases/tag/v0.28.0</url>
-    </release>
-    <release version="v0.34.3" date="2022-01-18">
-      <url>https://codeberg.org/papojari/Find-Billy/releases/tag/v0.34.3</url>
-    </release>
-    <release version="v0.35.0" date="2022-05-20">
-      <url>https://codeberg.org/papojari/Find-Billy/releases/tag/v0.35.0</url>
-    </release>
-    <release version="v0.36.0" date="2022-05-21">
-      <url>https://codeberg.org/papojari/Find-Billy/releases/tag/v0.36.0</url>
     </release>
   </releases>
 </component>
