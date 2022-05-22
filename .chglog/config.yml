@@ -7,30 +7,43 @@ options:
   commits:
     filters:
       Type:
-         - feat
-         - fix
-         - perf
-         - refactor
-         - docs
-         - ci
-         - git
-         - chore
-         - rename
-         - move
-         - delete
+        - feat
+        - fix
+        - perf
+        - refactor
+        - docs
+        - ci
+        - git
+        - chore
+        - rename
+        - move
+        - delete
+        - just
+        - appdata
+        - speedruns
+        - chglog
+        - readme
+        - license
   commit_groups:
-     title_maps:
-       feat: Features
-       fix: Bug Fixes
-       perf: Performance Improvements
-       refactor: Refactoring
-       docs: Documentation
-       ci: Continuous Integration
-       git: Git version control
-       chore: Chore
-       rename: Rename
-       move: Move
-       delete: Delete
+    title_maps:
+      feat: Features
+      fix: Bug Fixes
+      perf: Performance Improvements
+      refactor: Refactoring
+      docs: Documentation
+      ci: Continuous Integration
+      git: Git version control
+      chore: Chore
+      rename: Rename
+      move: Move
+      delete: Delete
+      just: just
+      appdata: appdata
+      speedruns: Speedruns
+      chglog: chglog
+      readme: Readme
+      license: License
+
   header:
     pattern: "^(\\w*)(?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
     pattern_maps:
