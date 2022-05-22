@@ -1,4 +1,10 @@
 
+<a name="v0.37.0"></a>
+## [v0.37.0](https://codeberg.org/papojari/Find-Billy/compare/v0.36.0...v0.37.0)
+
+> 2022-05-22
+
+
 <a name="v0.36.0"></a>
 ## [v0.36.0](https://codeberg.org/papojari/Find-Billy/compare/v0.35.0...v0.36.0)
 
