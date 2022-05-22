@@ -1,4 +1,20 @@
 
+<a name="v0.37.1"></a>
+## [v0.37.1](https://codeberg.org/papojari/Find-Billy/compare/v0.37.0...v0.37.1)
+
+> 2022-05-22
+
+
+<a name="v0.37.0"></a>
+## [v0.37.0](https://codeberg.org/papojari/Find-Billy/compare/v0.36.0...v0.37.0)
+
+> 2022-05-22
+
+### just
+
+* generate icons instead of having them in git repo
+
+
 <a name="v0.36.0"></a>
 ## [v0.36.0](https://codeberg.org/papojari/Find-Billy/compare/v0.35.0...v0.36.0)
 
@@ -12,6 +28,14 @@
 
 * **appdata:** update releases
 * **changelog:** update
+
+### Speedruns
+
+* add papojari's
+
+### just
+
+* put appdata-releases-update and changelog staged from ci into justfile
 
 
 <a name="v0.35.0"></a>
