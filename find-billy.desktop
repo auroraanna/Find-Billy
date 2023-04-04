@@ -1,0 +1,22 @@
+[Desktop Entry]
+Type=Application
+Version=1.5
+Name=Find Billy!
+Name[en]=Find Billy!
+Name[fr]=Trouvez Billy!
+Name[de]=Finde Billy!
+GenericName=Platform Game
+GenericName[en]=Platform Game
+GenericName[de]=Plattformspiel
+GenericName[fr]=Jeu de platforme
+Comment=Play a 2D platform game
+Comment[en]=Play a 2D platform game
+Comment[de]=Spiele ein 2D-Plattformspiel
+Comment[fr]=Jouez à un jeu de plateforme en 2D 
+Icon=find-billy
+Exec=find-billy
+Terminal=false
+Categories=Game;KidsGame;
+Keywords=platformer;jump-and-run;pixel-art;
+Keywords[en]=platformer;jump-and-run;pixel-art;
+
