@@ -45,8 +45,7 @@ build-icons:
 	mkdir -p {{build_icons_dir}}
 	rm -rf {{build_icons_dir}}
 	# Icons
-	mkdir -p {{build_icons_dir}}/usr/share/icons/hicolor
-	for icon_width in 128 144 180 192 432 512; do
+	for icon_width in 32 64 128 160 256 320 512; do
 		mkdir -p {{build_icons_dir}}/usr/share/icons/hicolor/$icon_width"x"$icon_width/apps
 		inkscape -o {{build_icons_dir}}/usr/share/icons/hicolor/$icon_width"x"$icon_width/apps/{{name}}.png -C -w $icon_width -h $icon_width --export-png-color-mode=RGBA_8 brand/icon.svg
 	done
