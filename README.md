@@ -24,39 +24,13 @@ Download latest macOS build from [Releases](https://codeberg.org/papojari/Find-B
 
 ### Linux
 
-#### [Flatpak version](https://flathub.org/apps/details/page.codeberg.papojari.Find_Billy)
+#### nixpkgs
 
-##### Installing
+Find Billy! is available with the package `find-billy`.
 
-[Setup Flathub for yor distro](https://flatpak.org/setup/).
+#### Flatpak
 
-###### via App store
-
-If your distro's app store can install flatpaks, search for `Find Billy` and click on install.
-
-###### via Command line
-
-Add the Flathub remote
-```bash
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-```
-and install with
-```bash
-flatpak install page.codeberg.papojari.Find_Billy
-```
-
-##### Running
-
-###### via App launcher
-
-Launch your favorite app launcher and search for `Billy`.
-
-###### via Command line
-
-Run
-```bash
-page.codeberg.papojari.Find_Billy
-```
+[The Flatpak version is available from flathub under the id `page.codeberg.papojari.Find_Billy`](https://flathub.org/apps/page.codeberg.papojari.Find_Billy).
 
 ## [Speedruns](speedruns.md)
 
