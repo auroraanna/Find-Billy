@@ -10,6 +10,7 @@ To get your run into this list send [papojari][papojari] a video of your run and
 
 | Time in h    | Game version | Person                    | Datetime                  |
 | ------------ | ------------ | ------------------------- | ------------------------- |
+| 00:02:01.947 | 0.37.2       | [Mazie][mazie]            | 2024-04-23 21:40:00+02:00 |
 | 00:02:41.326 | 0.37.2       | [Mazie][mazie]            | 2024-04-23 21:30:00+02:00 |
 | 00:02:59.284 | 0.35.0       | [Anna Aurora][annaaurora] | 2022-05-20 23:37:32+02:00 |
 | 00:03:58.674 | 0.37.2       | [Mazie][mazie]            | 2024-04-21 16:25:44+02:00 |
