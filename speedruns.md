@@ -2,7 +2,7 @@
 
 The fastest runs of the game can be found here. The list is sorted by time, shortest at the  beginning. The time is counted form after the start screen to the end screen.
 
-To get your run into this list send [papojari][papojari] a video of your run and all the data for each column in the table (`Person` should also have a link to an internet profile or website of you). [papojari][papojari] will then determine if the run is legitimate. If it is they will put all the data in a new row.
+To get your run into this list send [Anna Aurora][annaaurora] a video of your run and all the data for each column in the table (`Person` should also have a link to an internet profile or website of you). [Anna Aurora][annaaurora] will then determine if the run is legitimate. If it is they will put all the data in a new row.
 
 [annaaurora]: https://annaaurora.eu
 [ent]: https://ent.codeberg.page
