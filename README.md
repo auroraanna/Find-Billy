@@ -8,7 +8,7 @@ A 2 dimensional Pixel Art Jump & Run. Your mission is it to find Billy!
 
 #### Convenient
 
-Play the web version [here](https://annaaurora.eu/find-billy).
+Play the web version [here](https://find-billy.annaaurora.eu/).
 
 #### Self hosted
 
