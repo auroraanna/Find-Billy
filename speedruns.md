@@ -7,10 +7,12 @@ To get your run into this list send [Anna Aurora][annaaurora] a video of your ru
 [annaaurora]: https://annaaurora.eu
 [ent]: https://ent.codeberg.page
 [mazie]: https://mazie.rocks
+[vikonad]: https://github.com/Vikonad
 
-| Time in h    | Game version | Person                    | Datetime                  |
-| ------------ | ------------ | ------------------------- | ------------------------- |
-| 00:02:01.947 | 0.37.2       | [Mazie][mazie]            | 2024-04-23 21:40:00+02:00 |
-| 00:02:41.326 | 0.37.2       | [Mazie][mazie]            | 2024-04-23 21:30:00+02:00 |
-| 00:02:59.284 | 0.35.0       | [Anna Aurora][annaaurora] | 2022-05-20 23:37:32+02:00 |
-| 00:03:58.674 | 0.37.2       | [Mazie][mazie]            | 2024-04-21 16:25:44+02:00 |
+| Time in h    | Game version | Person                                | Datetime                  |
+| ------------ | ------------ | --------------------------------------| ------------------------- |
+| 00:01:55.664 | 0.37.2       | [vikonad][vikonad]                    | 2024-07-30 16:00:00+02:00 |
+| 00:02:01.947 | 0.37.2       | [Mazie][mazie]                        | 2024-04-23 21:40:00+02:00 |
+| 00:02:41.326 | 0.37.2       | [Mazie][mazie]                        | 2024-04-23 21:30:00+02:00 |
+| 00:02:59.284 | 0.35.0       | [Anna Aurora][annaaurora]             | 2022-05-20 23:37:32+02:00 |
+| 00:03:58.674 | 0.37.2       | [Mazie][mazie]                        | 2024-04-21 16:25:44+02:00 |
