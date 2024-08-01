@@ -1,6 +1,6 @@
 # Speedruns
 
-The fastest runs of the game can be found here. The list is sorted by time, shortest at the beginning. The time is counted form after the start screen to the end screen.
+The fastest runs of the game can be found here. The list is sorted by time, shortest at the beginning. The time is counted from after the start screen to the end screen.
 
 To get your run into this list send [Anna Aurora][annaaurora] a video of your run and all the data for each column in the table (`Person` should also have a link to an internet profile or website of you). [Anna Aurora][annaaurora] will then determine if the run is legitimate. If it is she will put all the data in a new row.
 
