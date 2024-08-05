@@ -11,6 +11,7 @@ To get your run into this list send [Anna Aurora][annaaurora] a video of your ru
 
 | Time in h    | Game version | Person                                | Datetime                  |
 | ------------ | ------------ | --------------------------------------| ------------------------- |
+| 00:01:53.365 | 0.37.2       | [vikonad][vikonad]                    | 2024-08-05 22:53:00+02:00 |
 | 00:01:53.690 | 0.37.2       | [Mazie][mazie]                        | 2024-08-03 18:14:00+02:00 |
 | 00:01:55.664 | 0.37.2       | [vikonad][vikonad]                    | 2024-07-30 16:00:00+02:00 |
 | 00:02:01.947 | 0.37.2       | [Mazie][mazie]                        | 2024-04-23 21:40:00+02:00 |
