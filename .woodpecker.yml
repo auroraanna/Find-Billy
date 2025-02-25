@@ -26,6 +26,12 @@ steps:
       - mkdir -v -p godot-build
       - godot -v --export-release "windows_x86-64" godot-build/Find-Billy_v${CI_COMMIT_TAG}_windows_x86-64.exe --headless
       - ls godot-build
+  - name: godot-build-windows_arm64
+    image: "barichello/godot-ci"
+    commands:
+      - mkdir -v -p godot-build
+      - godot -v --export-release "windows_arm64" godot-build/Find-Billy_v${CI_COMMIT_TAG}_windows_arm64.exe --headless
+      - ls godot-build
   - name: godot-build-mac
     image: "barichello/godot-ci"
     commands:
