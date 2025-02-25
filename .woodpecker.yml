@@ -15,36 +15,36 @@ steps:
       - apk add tar
       - tar czf icons.tar.gz --directory=build icons
   - name: godot-build-linux
-    image: "barichello/godot-ci:3.6"
+    image: "barichello/godot-ci"
     commands:
       - mkdir -v -p godot-build
-      - godot -v --export "Linux/X11" godot-build/Find\ Billy\ for\ Linux\ ${CI_COMMIT_TAG}.x86_64 --no-window
+      - godot -v --export-release "Linux/X11" godot-build/Find\ Billy\ for\ Linux\ ${CI_COMMIT_TAG}.x86_64 --headless
       - ls godot-build
   - name: godot-build-windows
-    image: "barichello/godot-ci:3.6"
+    image: "barichello/godot-ci"
     commands:
       - mkdir -v -p godot-build
-      - godot -v --export "Windows Desktop" godot-build/Find\ Billy\ for\ Windows\ ${CI_COMMIT_TAG}.exe --no-window
+      - godot -v --export-release "Windows Desktop" godot-build/Find\ Billy\ for\ Windows\ ${CI_COMMIT_TAG}.exe --headless
       - ls godot-build
   - name: godot-build-mac
-    image: "barichello/godot-ci:3.6"
+    image: "barichello/godot-ci"
     commands:
       - mkdir -v -p godot-build
-      - godot -v --export "Mac OSX" godot-build/Find\ Billy\ for\ Mac\ OSX\ ${CI_COMMIT_TAG}.zip --no-window
+      - godot -v --export-release "Mac OSX" godot-build/Find\ Billy\ for\ Mac\ OSX\ ${CI_COMMIT_TAG}.zip --headless
       - ls godot-build
   - name: godot-build-web
-    image: "barichello/godot-ci:3.6"
+    image: "barichello/godot-ci"
     commands:
       - mkdir -v -p godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}
-      - godot -v --export "HTML5" godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/index.html --no-window
+      - godot -v --export-release "HTML5" godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/index.html --headless
       - zip godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}.zip godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/*
       - rm -rf godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}
       - ls godot-build
   - name: godot-build-linux-pack
-    image: "barichello/godot-ci:3.6"
+    image: "barichello/godot-ci"
     commands:
       - mkdir -v -p godot-build
-      - godot -v --export-pack "Linux/X11" godot-build/godot-runner.pck --no-window
+      - godot -v --export-pack "Linux/X11" godot-build/godot-runner.pck --headless
       - ls godot-build
   - name: gitea-release
     image: woodpeckerci/plugin-release
