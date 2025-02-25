@@ -1,3 +1,9 @@
+<a name="v1.0.0"></a>
+## [v1.0.0](https://codeberg.org/annaaurora/Find-Billy/compare/v0.37.1...v1.0.0)
+
+> 2025-02-25
+
+Lots of speedruns added (we're at 1min and 53s now) and change of the application id (breaking change) from `page.codeberg.papojari.Find_Billy` to `eu.annaaurora.find_billy.Find_Billy` because annaaurora owns a domain now (well uh, for years actually).
 
 <a name="v0.37.1"></a>
 ## [v0.37.1](https://codeberg.org/papojari/Find-Billy/compare/v0.37.0...v0.37.1)
