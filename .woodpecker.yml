@@ -18,33 +18,33 @@ steps:
     image: "barichello/godot-ci"
     commands:
       - mkdir -v -p godot-build
-      - godot -v --export-release "Linux/X11" godot-build/Find\ Billy\ for\ Linux\ ${CI_COMMIT_TAG}.x86_64 --headless
+      - godot -v --export-release "linux_x86-64" godot-build/Find-Billy_v${CI_COMMIT_TAG}_linux_x86-64 --headless
       - ls godot-build
   - name: godot-build-windows
     image: "barichello/godot-ci"
     commands:
       - mkdir -v -p godot-build
-      - godot -v --export-release "Windows Desktop" godot-build/Find\ Billy\ for\ Windows\ ${CI_COMMIT_TAG}.exe --headless
+      - godot -v --export-release "windows_x86-64" godot-build/Find-Billy_v${CI_COMMIT_TAG}_windows_x86-64.exe --headless
       - ls godot-build
   - name: godot-build-mac
     image: "barichello/godot-ci"
     commands:
       - mkdir -v -p godot-build
-      - godot -v --export-release "macOS" godot-build/Find\ Billy\ for\ macOS\ ${CI_COMMIT_TAG}.zip --headless
+      - godot -v --export-release "macos_arm64" godot-build/Find-Billy_v${CI_COMMIT_TAG}_macos_arm64.zip --headless
       - ls godot-build
   - name: godot-build-web
     image: "barichello/godot-ci"
     commands:
-      - mkdir -v -p godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}
-      - godot -v --export-release "Web" godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/index.html --headless
-      - zip godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}.zip godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/*
-      - rm -rf godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}
+      - mkdir -v -p godot-build/Find-Billy_Web\ ${CI_COMMIT_TAG}
+      - godot -v --export-release "web_wasm" godot-build/Find-Billy_v${CI_COMMIT_TAG}_web_wasm/index.html --headless
+      - zip godot-build/Find-Billy_v${CI_COMMIT_TAG}_web_wasm.zip godot-build/Find-Billy_v${CI_COMMIT_TAG}_web_wasm/*
+      - rm -rf godot-build/Find-Billy_v${CI_COMMIT_TAG}_web_wasm
       - ls godot-build
   - name: godot-build-linux-pack
     image: "barichello/godot-ci"
     commands:
       - mkdir -v -p godot-build
-      - godot -v --export-pack "Linux/X11" godot-build/godot-runner.pck --headless
+      - godot -v --export-pack "linux_x86-64" godot-build/godot-runner.pck --headless
       - ls godot-build
   - name: gitea-release
     image: woodpeckerci/plugin-release
