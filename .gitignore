@@ -1,3 +1,6 @@
+# build output
+godot-build/
+build
 
 # Godot-specific ignores
 .godot/
