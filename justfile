@@ -64,11 +64,11 @@ appdata-releases-update:
 	#!/bin/sh
 	set -euxo pipefail
 	# Update appdata <releases>
-	head -1 page.codeberg.papojari.Find_Billy.appdata.xml > page.codeberg.papojari.Find_Billy.appdata.xml.tmp
-	xmlstarlet edit --omit-decl -s '//releases' -t elem -n "release" -s '//releases/release[last()]' -t elem -n "url" -v "https://codeberg.org/papojari/Find-Billy/releases/tag/v{{version}}" -s '//releases/release[last()]' -t attr -n "version" -v "v{{version}}" -s '//releases/release[last()]' -t attr -n "date" -v "$(date -u +'%Y-%m-%d')" page.codeberg.papojari.Find_Billy.appdata.xml >> page.codeberg.papojari.Find_Billy.appdata.xml.tmp
-	mv page.codeberg.papojari.Find_Billy.appdata.xml.tmp page.codeberg.papojari.Find_Billy.appdata.xml
+	head -1 eu.annaaurora.find_billy.Find_Billy.appdata.xml > eu.annaaurora.find_billy.Find_Billy.appdata.xml.tmp
+	xmlstarlet edit --omit-decl -s '//releases' -t elem -n "release" -s '//releases/release[last()]' -t elem -n "url" -v "https://codeberg.org/annaaurora/Find-Billy/releases/tag/v{{version}}" -s '//releases/release[last()]' -t attr -n "version" -v "v{{version}}" -s '//releases/release[last()]' -t attr -n "date" -v "$(date -u +'%Y-%m-%d')" eu.annaaurora.find_billy.Find_Billy.appdata.xml >> eu.annaaurora.find_billy.Find_Billy.appdata.xml.tmp
+	mv eu.annaaurora.find_billy.Find_Billy.appdata.xml.tmp eu.annaaurora.find_billy.Find_Billy.appdata.xml
 	# Git add
-	git add page.codeberg.papojari.Find_Billy.appdata.xml
+	git add eu.annaaurora.find_billy.Find_Billy.appdata.xml
 
 release: changelog appdata-releases-update
 	#!/bin/sh

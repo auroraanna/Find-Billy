@@ -12,15 +12,15 @@ Play the web version [here](https://find-billy.annaaurora.eu/).
 
 #### Self hosted
 
-Download the latest web build from [Releases](https://codeberg.org/papojari/Find-Billy/releases) then unzip it and serve it with your favorite web server.
+Download the latest web build from [Releases](https://codeberg.org/annaaurora/Find-Billy/releases) then unzip it and serve it with your favorite web server.
 
 ### Windows
 
-Download latest Windows build from [Releases](https://codeberg.org/papojari/Find-Billy/releases). To run, execute the download.
+Download latest Windows build from [Releases](https://codeberg.org/annaaurora/Find-Billy/releases). To run, execute the download.
 
 ### macOS
 
-Download latest macOS build from [Releases](https://codeberg.org/papojari/Find-Billy/releases). Open it and drap it into the Applications folder.
+Download latest macOS build from [Releases](https://codeberg.org/annaaurora/Find-Billy/releases). Open it and drap it into the Applications folder.
 
 ### Linux
 
