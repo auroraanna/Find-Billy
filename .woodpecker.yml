@@ -1,40 +1,38 @@
-pipeline:
-  build-icons:
+when:
+  - event: tag
+    branch: main
+
+steps:
+  - name: build-icons
     image: alpine
     commands:
       - apk add just
       - just alpine-install-deps
       - just build-icons
-  archive-icons:
+  - name: archive-icons
     image: alpine
     commands:
       - apk add tar
       - tar czf icons.tar.gz --directory=build icons
-  godot-build-linux:
+  - name: godot-build-linux
     image: barichello/godot-ci
     commands:
       - mkdir -v -p godot-build
       - godot -v --export "Linux/X11" godot-build/Find\ Billy\ for\ Linux\ ${CI_COMMIT_TAG}.x86_64
       - ls godot-build
-    when:
-      event: tag
-  godot-build-windows:
+  - name: godot-build-windows
     image: barichello/godot-ci
     commands:
       - mkdir -v -p godot-build
       - godot -v --export "Windows Desktop" godot-build/Find\ Billy\ for\ Windows\ ${CI_COMMIT_TAG}.exe
       - ls godot-build
-    when:
-      event: tag
-  godot-build-mac:
+  - name: godot-build-mac
     image: barichello/godot-ci
     commands:
       - mkdir -v -p godot-build
       - godot -v --export "Mac OSX" godot-build/Find\ Billy\ for\ Mac\ OSX\ ${CI_COMMIT_TAG}.zip
       - ls godot-build
-    when:
-      event: tag
-  godot-build-web:
+  - name: godot-build-web
     image: barichello/godot-ci
     commands:
       - mkdir -v -p godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}
@@ -42,53 +40,27 @@ pipeline:
       - zip godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}.zip godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/*
       - rm -rf godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}
       - ls godot-build
-    when:
-      event: tag
-  godot-build-linux-pack:
+  - name: godot-build-linux-pack
     image: barichello/godot-ci
     commands:
       - mkdir -v -p godot-build
       - godot -v --export-pack "Linux/X11" godot-build/godot-runner.pck
       - ls godot-build
-    when:
-      event: tag
-  gitea-release:
-    image: plugins/gitea-release
-    secrets: [ gitea_token token ]
+  - name: gitea-release
+    image: woodpeckerci/plugin-release
     settings:
-      api_key:
+      GITEA_TOKEN:
         from_secret: gitea_token
-      base_url: https://codeberg.org
+      api_key:
+        from_secret: GITEA_TOKEN
+      base_url: "https://codeberg.org"
       files:
         - godot-build/*
         - icons.tar.gz
       checksum:
         - sha256
         - sha512
-      title: ${CI_COMMIT_TAG}
+      title: "${CI_COMMIT_TAG}"
       note: ${CI_REPO_LINK}/src/branch/main/CHANGELOG.md#${CI_COMMIT_TAG/\./-}
-    when:
-      event: tag
       path:
         exclude: [ '*.md', '.chglog/**' ]
-  deploy-web:
-    image: alpine
-    secrets: [ token ]
-    commands:
-      - apk add git unzip rsync
-      # clone pages repository
-      - git clone https://"$${TOKEN}"@codeberg.org/${CI_REPO_OWNER}/pages.git /pages
-      # unzip web version
-      - unzip godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}.zip -d godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/
-      - cd godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/
-      - rsync -r --delete --exclude-from="../../../../.rsyncignore" * /pages/find-billy/
-      # configure git
-      - git config --global user.email "mail@ci.codeberg.org"
-      - git config --global user.name "Codeberg CI"
-      # deploy web version
-      - cd /pages
-      - git add -A
-      - >
-        git commit -m 'chore: update Find Billy! to ${CI_COMMIT_TAG}' ; git push
-    when:
-      event: tag
