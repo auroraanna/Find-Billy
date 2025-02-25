@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dxx7bl72lso64"]
+[gd_scene load_steps=15 format=3 uid="uid://dxx7bl72lso64"]
 
 [ext_resource type="Texture2D" uid="uid://b07xvm3prdwsj" path="res://characters/robert/animated.png" id="1"]
 [ext_resource type="Script" path="res://characters/robert/default.gd" id="2"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" path="res://ui/key_shortcuts.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://b3kkyqb0kdqm2" path="res://ui/stopwatch/default.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://bd6b21rhqdev6" path="res://ui/restart_button/default.tscn" id="6"]
+[ext_resource type="Theme" uid="uid://dkchp62dsb5xr" path="res://themes/default.tres" id="7_0uihk"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Jump"
@@ -62,6 +63,17 @@ _data = {
 "Stand": SubResource("3")
 }
 
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_5u1hb"]
+button_index = 5
+
+[sub_resource type="InputEventKey" id="InputEventKey_ogke1"]
+device = -1
+keycode = 75
+unicode = 107
+
+[sub_resource type="Shortcut" id="Shortcut_iw5k1"]
+events = [SubResource("InputEventJoypadButton_5u1hb"), SubResource("InputEventKey_ogke1")]
+
 [node name="Robert" type="CharacterBody2D"]
 collision_mask = 2
 script = ExtResource("2")
@@ -92,12 +104,14 @@ position_smoothing_speed = 6.0
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("7_0uihk")
 
 [node name="KeyShortcuts" parent="CanvasLayer/Control" instance=ExtResource("4")]
 layout_mode = 1
@@ -112,9 +126,19 @@ offset_right = 34.5
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
+focus_mode = 0
+theme = null
+shortcut = SubResource("Shortcut_iw5k1")
+item_count = 4
+popup/item_0/text = "r / Xbox Menu to restart"
+popup/item_1/text = "w / space / up arrow to move up"
+popup/item_1/id = 1
+popup/item_2/text = "a / left arrow to move left"
+popup/item_2/id = 2
+popup/item_3/text = "d / right arrow to move left"
+popup/item_3/id = 3
 
 [node name="Stopwatch" parent="CanvasLayer/Control" instance=ExtResource("5")]
-texture_filter = 2
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -123,6 +147,7 @@ offset_top = -11.0
 offset_right = 58.0
 offset_bottom = 0.0
 grow_vertical = 0
+theme = null
 
 [node name="Restart" parent="CanvasLayer/Control" instance=ExtResource("6")]
 layout_mode = 1
@@ -137,5 +162,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 0
 grow_vertical = 0
+focus_mode = 0
+theme = null
 
 [connection signal="pressed" from="CanvasLayer/Control/Restart" to="CanvasLayer/Control/Restart" method="_on_Restart_pressed"]

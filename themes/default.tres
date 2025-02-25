@@ -1,7 +1,4 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dkchp62dsb5xr"]
-
-[ext_resource type="FontFile" uid="uid://d2rxo7tv2iuif" path="res://fonts/montreal/Montreal.tres" id="1"]
+[gd_resource type="Theme" format=3 uid="uid://dkchp62dsb5xr"]
 
 [resource]
-default_font = ExtResource("1")
 default_font_size = 8
