@@ -41,7 +41,7 @@ steps:
   - name: godot-build_web_wasm
     image: "barichello/godot-ci"
     commands:
-      - mkdir -v -p godot-build/Find-Billy_Web\ ${CI_COMMIT_TAG}
+      - mkdir -v -p godot-build/Find-Billy_v${CI_COMMIT_TAG}_web_wasm
       - godot -v --export-release "web_wasm" godot-build/Find-Billy_v${CI_COMMIT_TAG}_web_wasm/index.html --headless
       - zip godot-build/Find-Billy_v${CI_COMMIT_TAG}_web_wasm.zip godot-build/Find-Billy_v${CI_COMMIT_TAG}_web_wasm/*
       - rm -rf godot-build/Find-Billy_v${CI_COMMIT_TAG}_web_wasm
