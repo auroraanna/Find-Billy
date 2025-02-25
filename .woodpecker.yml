@@ -36,7 +36,7 @@ steps:
     image: "barichello/godot-ci"
     commands:
       - mkdir -v -p godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}
-      - godot -v --export-release "HTML5" godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/index.html --headless
+      - godot -v --export-release "Web" godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/index.html --headless
       - zip godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}.zip godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}/*
       - rm -rf godot-build/Find\ Billy\ for\ Web\ ${CI_COMMIT_TAG}
       - ls godot-build
