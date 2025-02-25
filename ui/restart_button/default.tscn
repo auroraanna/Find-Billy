@@ -1,18 +1,31 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://bd6b21rhqdev6"]
 
-[ext_resource path="res://fonts/montreal/Montreal-Bold.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://ui/restart_button/default.gd" type="Script" id=2]
-[ext_resource path="res://themes/default.tres" type="Theme" id=3]
+[ext_resource type="FontFile" uid="uid://bbihctfxijq3a" path="res://fonts/montreal/Montreal-Bold.ttf" id="1"]
+[ext_resource type="Script" path="res://ui/restart_button/default.gd" id="2"]
+[ext_resource type="Theme" uid="uid://dkchp62dsb5xr" path="res://themes/default.tres" id="3"]
 
-[sub_resource type="DynamicFont" id=1]
-size = 8
-font_data = ExtResource( 1 )
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("1"), ExtResource("1")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [node name="Restart" type="Button"]
-margin_right = 43.0
-margin_bottom = 17.0
-theme = ExtResource( 3 )
-custom_fonts/font = SubResource( 1 )
+anchors_preset = -1
+offset_right = 43.0
+offset_bottom = 17.0
+theme = ExtResource("3")
+theme_override_fonts/font = SubResource("1")
 text = "Restart"
 flat = true
-script = ExtResource( 2 )
+script = ExtResource("2")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oxr0de684hy2"
-path="res://.godot/imported/4.png-dca87a614c152cd5b6bcd5c7d4b537cc.ctex"
+uid="uid://x0mrmjy1p7hy"
+path="res://.godot/imported/thumbnail.png-3f545d161fd110f6ef4e5b6d4c7c77a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/nuclear_reactor/animated_images/4.png"
-dest_files=["res://.godot/imported/4.png-dca87a614c152cd5b6bcd5c7d4b537cc.ctex"]
+source_file="res://thumbnail.png"
+dest_files=["res://.godot/imported/thumbnail.png-3f545d161fd110f6ef4e5b6d4c7c77a7.ctex"]
 
 [params]
 

@@ -1,21 +1,33 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://domk0emvujbdm"]
 
-[ext_resource path="res://models/propellor/animated_images/1.png" type="Texture" id=1]
-[ext_resource path="res://models/propellor/animated_images/0.png" type="Texture" id=2]
-[ext_resource path="res://models/propellor/animated_images/3.png" type="Texture" id=3]
-[ext_resource path="res://models/propellor/animated_images/2.png" type="Texture" id=4]
+[ext_resource type="Texture2D" uid="uid://boa3ymhdbhuvn" path="res://models/propellor/animated_images/1.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dbgw4wgc8dy6e" path="res://models/propellor/animated_images/0.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://djkrjogrl07j5" path="res://models/propellor/animated_images/3.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cdlrul6gk5lba" path="res://models/propellor/animated_images/2.png" id="4"]
 
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ) ],
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 5.0
-} ]
+}]
 
-[node name="Propellor" type="AnimatedSprite"]
-position = Vector2( 360, 24 )
-frames = SubResource( 1 )
+[node name="Propellor" type="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(360, 24)
+sprite_frames = SubResource("1")
 frame = 1
 speed_scale = 2.0
-playing = true

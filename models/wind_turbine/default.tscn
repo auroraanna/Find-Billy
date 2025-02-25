@@ -1,21 +1,33 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://2ilfxkvpmpuw"]
 
-[ext_resource path="res://models/wind_turbine/animated_images/0.png" type="Texture" id=1]
-[ext_resource path="res://models/wind_turbine/animated_images/1.png" type="Texture" id=2]
-[ext_resource path="res://models/wind_turbine/animated_images/2.png" type="Texture" id=3]
-[ext_resource path="res://models/wind_turbine/animated_images/3.png" type="Texture" id=4]
+[ext_resource type="Texture2D" uid="uid://cfkhihnn1lpyd" path="res://models/wind_turbine/animated_images/0.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b00ui8hyvubdh" path="res://models/wind_turbine/animated_images/1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b5o632fopqyd" path="res://models/wind_turbine/animated_images/2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dajhtejotrdmo" path="res://models/wind_turbine/animated_images/3.png" id="4"]
 
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ) ],
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 5.0
-} ]
+}]
 
-[node name="WindPowerPlant" type="AnimatedSprite"]
-position = Vector2( 583.554, -240 )
-frames = SubResource( 1 )
+[node name="WindPowerPlant" type="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(583.554, -240)
+sprite_frames = SubResource("1")
 frame = 2
 speed_scale = 2.0
-playing = true

@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 const ACCELERATION = 512
 const MAX_SPEED = 96
@@ -9,8 +9,8 @@ const JUMP_FORCE = 140
 
 var motion = Vector2.ZERO
 
-onready var sprite = $Sprite
-onready var animationPlayer = $AnimationPlayer
+@onready var sprite = $Sprite2D
+@onready var animationPlayer = $AnimationPlayer
 
 func _physics_process(delta):
 	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -27,7 +27,7 @@ func _physics_process(delta):
 	
 	if is_on_floor():
 		if x_input == 0:
-			motion.x = lerp(motion.x, 0, FRICTION)
+			motion.x = lerp(motion.x, 0.0, FRICTION)
 			
 		if Input.is_action_just_pressed("ui_up"):
 			motion.y = -JUMP_FORCE
@@ -39,16 +39,18 @@ func _physics_process(delta):
 			motion.y = -JUMP_FORCE/2
 		
 		if x_input == 0:
-			motion.x = lerp(motion.x, 0, AIR_RESISTANCE)
+			motion.x = lerp(motion.x, 0.0, AIR_RESISTANCE)
 			
-	motion = move_and_slide(motion, Vector2.UP)
+	set_velocity(motion)
+	set_up_direction(Vector2.UP)
+	move_and_slide()
+	motion = velocity
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()
 		global.robert_finished = false
 		global.robert_time = 0
 
-func _on_Finish_body_entered(body):
+func _on_Finish_body_entered(_body):
 	global.robert_finished = true
-

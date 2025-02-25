@@ -1,24 +1,60 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://bc3jpwukyijh8"]
 
-[ext_resource path="res://models/nuclear_reactor/animated_images/6.png" type="Texture" id=1]
-[ext_resource path="res://models/nuclear_reactor/animated_images/5.png" type="Texture" id=2]
-[ext_resource path="res://models/nuclear_reactor/animated_images/4.png" type="Texture" id=3]
-[ext_resource path="res://models/nuclear_reactor/animated_images/2.png" type="Texture" id=4]
-[ext_resource path="res://models/nuclear_reactor/animated_images/0.png" type="Texture" id=5]
-[ext_resource path="res://models/nuclear_reactor/animated_images/3.png" type="Texture" id=6]
-[ext_resource path="res://models/nuclear_reactor/animated_images/1.png" type="Texture" id=7]
+[ext_resource type="Texture2D" uid="uid://cxtmva80a5ytj" path="res://models/nuclear_reactor/animated_images/6.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://c12dghreovcyt" path="res://models/nuclear_reactor/animated_images/5.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://oxr0de684hy2" path="res://models/nuclear_reactor/animated_images/4.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bdhubqv6xkd2x" path="res://models/nuclear_reactor/animated_images/2.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cx81j5grg742" path="res://models/nuclear_reactor/animated_images/0.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://co1321q4gbjst" path="res://models/nuclear_reactor/animated_images/3.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://c00bck4fiydsj" path="res://models/nuclear_reactor/animated_images/1.png" id="7"]
 
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 7 ) ],
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 5.0
-} ]
+}]
 
-[node name="NuclearReactor" type="AnimatedSprite"]
-position = Vector2( -152, -96 )
-frames = SubResource( 1 )
+[node name="NuclearReactor" type="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(-152, -96)
+sprite_frames = SubResource("1")
 frame = 3
 speed_scale = 0.5
-playing = true

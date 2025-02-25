@@ -1,6 +1,6 @@
 extends Label
 
-onready var label = get_node(".")
+@onready var label = get_node(".")
 
 func _process(delta):
 	if !global.robert_finished:
