@@ -56,5 +56,6 @@ animations = [{
 texture_filter = 1
 position = Vector2(-152, -96)
 sprite_frames = SubResource("1")
+autoplay = "default"
 frame = 3
 speed_scale = 0.5

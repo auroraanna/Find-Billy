@@ -124,33 +124,40 @@ position = Vector2(-304, -88)
 [node name="BilleWasALieSign" parent="." instance=ExtResource("7")]
 
 [node name="WindTurbine" parent="." instance=ExtResource("10")]
+position = Vector2(583.554, -237)
 sprite_frames = SubResource("1")
-frame = 1
+frame = 0
+frame_progress = 0.0157611
 
 [node name="WindTurbine2" parent="." instance=ExtResource("10")]
 position = Vector2(184, -432)
 sprite_frames = SubResource("1")
-frame = 1
+frame = 0
+frame_progress = 0.731972
 
 [node name="WindTurbine3" parent="." instance=ExtResource("10")]
 position = Vector2(568, -208)
 sprite_frames = SubResource("1")
-frame = 1
+frame = 0
+frame_progress = 0.755825
 
 [node name="WindTurbine4" parent="." instance=ExtResource("10")]
 position = Vector2(616, -1888)
 sprite_frames = SubResource("1")
-frame = 1
+frame = 0
+frame_progress = 0.839157
 
 [node name="WindTurbine5" parent="." instance=ExtResource("10")]
 position = Vector2(-152, -560)
 sprite_frames = SubResource("1")
-frame = 1
+frame = 0
+frame_progress = 0.857986
 
 [node name="WindTurbine6" parent="." instance=ExtResource("10")]
 position = Vector2(488, -1280)
 sprite_frames = SubResource("1")
-frame = 1
+frame = 0
+frame_progress = 0.277495
 
 [node name="FlowerRed" parent="." instance=ExtResource("6")]
 
@@ -173,26 +180,31 @@ autoplay = true
 [node name="Propellor" parent="." instance=ExtResource("2")]
 sprite_frames = SubResource("SpriteFrames_dsok1")
 frame = 0
+frame_progress = 0.100758
 
 [node name="Propellor2" parent="." instance=ExtResource("2")]
 position = Vector2(312, -72)
 sprite_frames = SubResource("SpriteFrames_dsok1")
 frame = 0
+frame_progress = 0.14628
 
 [node name="Propellor4" parent="." instance=ExtResource("2")]
 position = Vector2(136, -88)
 sprite_frames = SubResource("SpriteFrames_dsok1")
 frame = 0
+frame_progress = 0.741901
 
 [node name="Propellor3" parent="." instance=ExtResource("2")]
 position = Vector2(296, -216)
 sprite_frames = SubResource("SpriteFrames_dsok1")
 frame = 0
+frame_progress = 0.425791
 
 [node name="Propellor5" parent="." instance=ExtResource("2")]
 position = Vector2(184, -376)
 sprite_frames = SubResource("SpriteFrames_dsok1")
 frame = 0
+frame_progress = 0.770601
 
 [node name="Propellor6" parent="." instance=ExtResource("2")]
 position = Vector2(632, -440)

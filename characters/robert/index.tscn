@@ -84,11 +84,13 @@ position = Vector2(-8, -23)
 texture = ExtResource("1")
 centered = false
 hframes = 5
+frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_yi6nh")
 }
+autoplay = "Jump"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(4, 0, 5, -1, 5, -8, 7, -10, 7, -18, 5, -18, 5, -22, 4, -23, -2, -23, -2, -23, -3, -22, -3, -18, -7, -18, -7, -10, -5, -8, -5, -1, -4, 0)
