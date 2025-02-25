@@ -19,11 +19,14 @@
   <developer_name>annaaurora</developer_name>
   <screenshots>
     <screenshot type="default">
-      <caption>Dinonuggy surrounded by kitchen utensils</caption>
-      <image type="thumbnail" width="2090" height="1333">https://codeberg.org/annaaurora/Find-Billy/raw/branch/main/thumbnail.png</image>
+      <caption>Robert (the robot player) standing on an elevated grass platform inside the level next to solar panels.</caption>
+      <image type="thumbnail" width="2090" height="1333">https://codeberg.org/annaaurora/Find-Billy/raw/tag/v1.0.10/thumbnail.png</image>
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.0.10" date="2025-02-25">
+      <url>https://codeberg.org/annaaurora/Find-Billy/releases/tag/v1.0.10</url>
+    </release>
     <release version="1.0.0" date="2025-02-25">
       <url>https://codeberg.org/annaaurora/Find-Billy/releases/tag/v1.0.0</url>
     </release>
