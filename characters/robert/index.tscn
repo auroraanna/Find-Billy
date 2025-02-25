@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b07xvm3prdwsj" path="res://characters/robert/animated.png" id="1"]
 [ext_resource type="Script" path="res://characters/robert/default.gd" id="2"]
 [ext_resource type="AudioStream" uid="uid://d00rhu11pochk" path="res://sound_effects/jump.wav" id="3"]
-[ext_resource type="PackedScene" path="res://ui/key_shortcuts.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://ui/key_binds.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://b3kkyqb0kdqm2" path="res://ui/stopwatch/default.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://bd6b21rhqdev6" path="res://ui/restart_button/default.tscn" id="6"]
 [ext_resource type="Theme" uid="uid://dkchp62dsb5xr" path="res://themes/default.tres" id="7_0uihk"]
@@ -113,7 +113,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("7_0uihk")
 
-[node name="KeyShortcuts" parent="CanvasLayer/Control" instance=ExtResource("4")]
+[node name="KeyBinds" parent="CanvasLayer/Control" instance=ExtResource("4")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
