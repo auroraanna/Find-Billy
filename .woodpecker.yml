@@ -30,7 +30,7 @@ steps:
     image: "barichello/godot-ci"
     commands:
       - mkdir -v -p godot-build
-      - godot -v --export-release "Mac OSX" godot-build/Find\ Billy\ for\ Mac\ OSX\ ${CI_COMMIT_TAG}.zip --headless
+      - godot -v --export-release "macOS" godot-build/Find\ Billy\ for\ macOS\ ${CI_COMMIT_TAG}.zip --headless
       - ls godot-build
   - name: godot-build-web
     image: "barichello/godot-ci"
