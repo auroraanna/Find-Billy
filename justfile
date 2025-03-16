@@ -2,40 +2,11 @@
 name:='find-billy'
 build_dir:='./build'
 build_icons_dir:=build_dir+'/icons'
-alpine_deps:='git xmlstarlet imagemagick inkscape'
-nixpkgs_deps:='git xmlstarlet imagemagick inkscape'
-version:='0.1.0'
+version:='1.0.13'
 
 # By default, recipes are only listed.
 default:
 	@just --list
-
-alpine-install-deps:
-	@apk add {{alpine_deps}}
-
-alpine-uninstall-deps:
-	@apk del {{alpine_deps}}
-
-non-nixos-install-deps:
-	#!/bin/sh
-	set -euxo pipefail
-	for package_name in {{nixpkgs_deps}}; do
-		nix-env -iA nixpkgs.$package_name
-	done
-
-nixos-install-deps:
-	#!/bin/sh
-	set -euxo pipefail
-	for package_name in {{nixpkgs_deps}}; do
-		nix-env -iA nixos.$package_name
-	done
-
-nix-uninstall-deps:
-	#!/bin/sh
-	set -euxo pipefail
-	for package_name in {{nixpkgs_deps}}; do
-		nix-env -e $package_name
-	done
 
 # Generate several icon sizes and formats from one icon.
 build-icons:
@@ -49,16 +20,11 @@ build-icons:
 		mkdir -p {{build_icons_dir}}/usr/share/icons/hicolor/$icon_width"x"$icon_width/apps
 		inkscape -o {{build_icons_dir}}/usr/share/icons/hicolor/$icon_width"x"$icon_width/apps/{{name}}.png -C -w $icon_width -h $icon_width --export-png-color-mode=RGBA_8 brand/icon.svg
 	done
-	convert {{build_icons_dir}}/usr/share/icons/hicolor/128x128/apps/{{name}}.png {{build_icons_dir}}/usr/share/icons/hicolor/128x128/apps/{{name}}.ico
-	convert {{build_icons_dir}}/usr/share/icons/hicolor/128x128/apps/{{name}}.png {{build_icons_dir}}/usr/share/icons/hicolor/128x128/apps/{{name}}.icns
+	magick {{build_icons_dir}}/usr/share/icons/hicolor/128x128/apps/{{name}}.png {{build_icons_dir}}/usr/share/icons/hicolor/128x128/apps/{{name}}.ico
+	magick {{build_icons_dir}}/usr/share/icons/hicolor/128x128/apps/{{name}}.png {{build_icons_dir}}/usr/share/icons/hicolor/128x128/apps/{{name}}.icns
 
-changelog:
-	#!/bin/sh
-	set -euxo pipefail
-	# Generate changelog
-	git-chglog > CHANGELOG.md
-	# Git add
-	git add CHANGELOG.md
+archive-icons: build-icons
+	tar czf icons.tar.gz --directory=build icons
 
 appdata-releases-update:
 	#!/bin/sh
@@ -70,9 +36,48 @@ appdata-releases-update:
 	# Git add
 	git add eu.annaaurora.find_billy.Find_Billy.appdata.xml
 
-release: changelog appdata-releases-update
+release: appdata-releases-update
 	#!/bin/sh
 	set -euxo pipefail
 	git commit -m "release: v{{version}}"
 	git tag -a -m "version {{version}}" "v{{version}}"
 
+godot-build: godot-build_linux_x86-64 godot-build_windows_x86-64 godot-build_windows_arm64 godot-build_mac_arm64 godot-build_web_wasm godot-build_linux-pack
+	
+godot-build_linux_x86-64:
+	#!/bin/sh
+	set -euxo pipefail
+	mkdir -v -p godot-build
+	godot4 -v --export-release "linux_x86-64" godot-build/Find-Billy_{{version}}_linux_x86-64 --headless
+
+godot-build_windows_x86-64:
+	#!/bin/sh
+	set -euxo pipefail
+	mkdir -v -p godot-build
+	godot4 -v --export-release "windows_x86-64" godot-build/Find-Billy_{{version}}_windows_x86-64.exe --headless
+
+godot-build_windows_arm64:
+	#!/bin/sh
+	set -euxo pipefail
+	mkdir -v -p godot-build
+	godot4 -v --export-release "windows_arm64" godot-build/Find-Billy_{{version}}_windows_arm64.exe --headless
+
+godot-build_mac_arm64:
+	#!/bin/sh
+	set -euxo pipefail
+	mkdir -v -p godot-build
+	godot4 -v --export-release "macos_arm64" godot-build/Find-Billy_{{version}}_macos_arm64.zip --headless
+
+godot-build_web_wasm:
+	#!/bin/sh
+	set -euxo pipefail
+	mkdir -v -p godot-build/Find-Billy_{{version}}_web_wasm
+	godot4 -v --export-release "web_wasm" godot-build/Find-Billy_{{version}}_web_wasm/index.html --headless
+	7z a godot-build/Find-Billy_{{version}}_web_wasm.zip godot-build/Find-Billy_{{version}}_web_wasm/*
+	rm -rf godot-build/Find-Billy_{{version}}_web_wasm
+
+godot-build_linux-pack:
+	#!/bin/sh
+	set -euxo pipefail
+	mkdir -v -p godot-build
+	godot4 -v --export-pack "linux_x86-64" godot-build/godot-runner.pck --headless
