@@ -3,6 +3,8 @@ name:='find-billy'
 build_dir:='./build'
 build_icons_dir:=build_dir+'/icons'
 version:='1.0.13'
+godot_exe:='godot4'
+zip_exe:='7z a'
 
 # By default, recipes are only listed.
 default:
@@ -48,36 +50,36 @@ godot-build_linux_x86-64:
 	#!/bin/sh
 	set -euxo pipefail
 	mkdir -v -p godot-build
-	godot4 -v --export-release "linux_x86-64" godot-build/Find-Billy_{{version}}_linux_x86-64 --headless
+	{{godot_exe}} -v --export-release "linux_x86-64" godot-build/Find-Billy_{{version}}_linux_x86-64 --headless
 
 godot-build_windows_x86-64:
 	#!/bin/sh
 	set -euxo pipefail
 	mkdir -v -p godot-build
-	godot4 -v --export-release "windows_x86-64" godot-build/Find-Billy_{{version}}_windows_x86-64.exe --headless
+	{{godot_exe}} -v --export-release "windows_x86-64" godot-build/Find-Billy_{{version}}_windows_x86-64.exe --headless
 
 godot-build_windows_arm64:
 	#!/bin/sh
 	set -euxo pipefail
 	mkdir -v -p godot-build
-	godot4 -v --export-release "windows_arm64" godot-build/Find-Billy_{{version}}_windows_arm64.exe --headless
+	{{godot_exe}} -v --export-release "windows_arm64" godot-build/Find-Billy_{{version}}_windows_arm64.exe --headless
 
 godot-build_mac_arm64:
 	#!/bin/sh
 	set -euxo pipefail
 	mkdir -v -p godot-build
-	godot4 -v --export-release "macos_arm64" godot-build/Find-Billy_{{version}}_macos_arm64.zip --headless
+	{{godot_exe}} -v --export-release "macos_arm64" godot-build/Find-Billy_{{version}}_macos_arm64.zip --headless
 
 godot-build_web_wasm:
 	#!/bin/sh
 	set -euxo pipefail
 	mkdir -v -p godot-build/Find-Billy_{{version}}_web_wasm
-	godot4 -v --export-release "web_wasm" godot-build/Find-Billy_{{version}}_web_wasm/index.html --headless
-	7z a godot-build/Find-Billy_{{version}}_web_wasm.zip godot-build/Find-Billy_{{version}}_web_wasm/*
+	{{godot_exe}} -v --export-release "web_wasm" godot-build/Find-Billy_{{version}}_web_wasm/index.html --headless
+	{{zip_exe}} a godot-build/Find-Billy_{{version}}_web_wasm.zip godot-build/Find-Billy_{{version}}_web_wasm/*
 	rm -rf godot-build/Find-Billy_{{version}}_web_wasm
 
 godot-build_linux-pack:
 	#!/bin/sh
 	set -euxo pipefail
 	mkdir -v -p godot-build
-	godot4 -v --export-pack "linux_x86-64" godot-build/godot-runner.pck --headless
+	{{godot_exe}} -v --export-pack "linux_x86-64" godot-build/godot-runner.pck --headless
