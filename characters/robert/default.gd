@@ -54,3 +54,4 @@ func _input(_event):
 
 func _on_Finish_body_entered(_body):
 	global.robert_finished = true
+	stopwatch.handle_run_time()
