@@ -24,6 +24,9 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.1.0" date="2025-04-05">
+      <url>https://codeberg.org/annaaurora/Find-Billy/releases/tag/v1.1.0</url>
+    </release>
     <release version="1.0.13" date="2025-03-05">
       <url>https://codeberg.org/annaaurora/Find-Billy/releases/tag/v1.0.13</url>
     </release>

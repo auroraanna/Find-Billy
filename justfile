@@ -2,7 +2,7 @@
 name:='find-billy'
 build_dir:='./build'
 build_icons_dir:=build_dir+'/icons'
-version:='1.0.13'
+version:='1.1.0'
 godot_exe:='godot4'
 zip_exe:='7z a'
 
