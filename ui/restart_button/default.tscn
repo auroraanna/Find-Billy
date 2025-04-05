@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bd6b21rhqdev6"]
 
 [ext_resource type="FontFile" uid="uid://bbihctfxijq3a" path="res://fonts/montreal/Montreal-Bold.ttf" id="1"]
-[ext_resource type="Script" path="res://ui/restart_button/default.gd" id="2"]
+[ext_resource type="Script" uid="uid://bhvuufujbcqdh" path="res://ui/restart_button/default.gd" id="2"]
 [ext_resource type="Theme" uid="uid://dkchp62dsb5xr" path="res://themes/default.tres" id="3"]
 
 [sub_resource type="FontFile" id="1"]

@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://nuvvxe8a6qtu"]
 
-[ext_resource path="res://fonts/montreal/Montreal-Bold.ttf" type="FontFile" id=1]
-[ext_resource path="res://themes/default.tres" type="Theme" id=2]
+[ext_resource type="FontFile" uid="uid://bbihctfxijq3a" path="res://fonts/montreal/Montreal-Bold.ttf" id="1"]
+[ext_resource type="Theme" uid="uid://dkchp62dsb5xr" path="res://themes/default.tres" id="2"]
 
-[sub_resource type="FontFile" id=5]
-size = 8
-font_data = ExtResource( 1 )
+[sub_resource type="FontFile" id="5"]
+fallbacks = Array[Font]([ExtResource("1")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [node name="KeyBinds" type="MenuButton"]
 anchor_left = 1.0
@@ -13,7 +17,7 @@ anchor_right = 1.0
 offset_left = -69.0
 offset_bottom = 17.0
 focus_mode = 2
-theme = ExtResource( 2 )
-theme_override_fonts/font = SubResource( 5 )
+theme = ExtResource("2")
+theme_override_fonts/font = SubResource("5")
 text = "Key bindings"
-items = [ "r / Xbox X to restart", null, 0, false, false, 0, 0, null, "", false, "w / space / up arrow to move up", null, 0, false, false, 1, 0, null, "", false, "a / left arrow to move left", null, 0, false, false, 2, 0, null, "", false, "d / right arrow to move left", null, 0, false, false, 4, 0, null, "", false ]
+items = ["r / Xbox X to restart", null, 0, false, false, 0, 0, null, "", false, "w / space / up arrow to move up", null, 0, false, false, 1, 0, null, "", false, "a / left arrow to move left", null, 0, false, false, 2, 0, null, "", false, "d / right arrow to move left", null, 0, false, false, 4, 0, null, "", false]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b3kkyqb0kdqm2"]
 
-[ext_resource type="Script" path="res://ui/stopwatch/default.gd" id="1"]
+[ext_resource type="Script" uid="uid://b2hixwgaut00x" path="res://ui/stopwatch/default.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://bbihctfxijq3a" path="res://fonts/montreal/Montreal-Bold.ttf" id="2"]
 [ext_resource type="Theme" uid="uid://dkchp62dsb5xr" path="res://themes/default.tres" id="3"]
 

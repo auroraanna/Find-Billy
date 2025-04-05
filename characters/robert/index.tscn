@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://dxx7bl72lso64"]
 
 [ext_resource type="Texture2D" uid="uid://b07xvm3prdwsj" path="res://characters/robert/animated.png" id="1"]
-[ext_resource type="Script" path="res://characters/robert/default.gd" id="2"]
+[ext_resource type="Script" uid="uid://de8u0dm1mp0ax" path="res://characters/robert/default.gd" id="2"]
 [ext_resource type="AudioStream" uid="uid://d00rhu11pochk" path="res://sound_effects/jump.wav" id="3"]
-[ext_resource type="PackedScene" path="res://ui/key_binds.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://nuvvxe8a6qtu" path="res://ui/key_binds.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://b3kkyqb0kdqm2" path="res://ui/stopwatch/default.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://bd6b21rhqdev6" path="res://ui/restart_button/default.tscn" id="6"]
 [ext_resource type="Theme" uid="uid://dkchp62dsb5xr" path="res://themes/default.tres" id="7_0uihk"]
@@ -58,9 +58,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yi6nh"]
 _data = {
-"Jump": SubResource("1"),
-"Roll": SubResource("2"),
-"Stand": SubResource("3")
+&"Jump": SubResource("1"),
+&"Roll": SubResource("2"),
+&"Stand": SubResource("3")
 }
 
 [sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_5u1hb"]
@@ -88,7 +88,7 @@ frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_yi6nh")
+&"": SubResource("AnimationLibrary_yi6nh")
 }
 autoplay = "Jump"
 
@@ -133,6 +133,7 @@ theme = null
 shortcut = SubResource("Shortcut_iw5k1")
 item_count = 4
 popup/item_0/text = "r / Xbox Menu to restart"
+popup/item_0/id = 0
 popup/item_1/text = "w / space / up arrow to move up"
 popup/item_1/id = 1
 popup/item_2/text = "a / left arrow to move left"
