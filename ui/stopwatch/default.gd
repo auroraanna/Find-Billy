@@ -14,22 +14,17 @@ func _process(delta):
 	label.text = "%02d:%02d:%02d.%03d" % [hours, mins, secs, milsecs]
 
 func handle_run_time():
-	var metrics_path = "user://metrics.json"
-	var metrics_file = FileAccess.open(metrics_path, FileAccess.READ_WRITE)
-	var metrics = {}
-	if (FileAccess.file_exists(metrics_path)):
-		var metrics_text = metrics_file.get_as_text()
-		if (metrics_text != ""):
-			var maybe_metrics = JSON.parse_string(metrics_file.get_as_text())
-			if (maybe_metrics != null):
-				metrics = maybe_metrics
+	var persistent_data_path = "user://metrics.cfg"
+	var persistent_data = ConfigFile.new()
+	persistent_data.load(persistent_data_path)
 
-	if (metrics.get("best_run_time") == null):
-		set_run_time_as_best_run_time(metrics, metrics_file)
+	if (persistent_data.get_value("metrics", "best_run_time") == null):
+		set_run_time_as_best_run_time(persistent_data, persistent_data_path)
 	else:
-		if (metrics.get("best_run_time") > global.robert_time):
-			set_run_time_as_best_run_time(metrics, metrics_file)
+		if (float(persistent_data.get_value("metrics", "best_run_time")) > global.robert_time):
+			set_run_time_as_best_run_time(persistent_data, persistent_data_path)
 
-func set_run_time_as_best_run_time(metrics, metrics_file):
-	metrics["best_run_time"] = global.robert_time
-	metrics_file.store_string(JSON.stringify(metrics))
+func set_run_time_as_best_run_time(config, persistent_data_path):
+	config.set_value("metrics", "best_run_time", global.robert_time)
+	if (config.save(persistent_data_path) != OK):
+		print("Failed to save this run's time.")
