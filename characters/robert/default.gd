@@ -11,6 +11,7 @@ var motion = Vector2.ZERO
 
 @onready var sprite = $Sprite2D
 @onready var animationPlayer = $AnimationPlayer
+@onready var stopwatch = $CanvasLayer/Control/Stopwatch
 
 func _physics_process(delta):
 	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
