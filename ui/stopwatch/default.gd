@@ -18,13 +18,10 @@ func handle_run_time():
 	var persistent_data = ConfigFile.new()
 	persistent_data.load(persistent_data_path)
 
-	if (persistent_data.get_value("metrics", "best_run_time") == null):
-		set_run_time_as_best_run_time(persistent_data, persistent_data_path)
-	else:
-		if (float(persistent_data.get_value("metrics", "best_run_time")) > global.robert_time):
-			set_run_time_as_best_run_time(persistent_data, persistent_data_path)
-
-func set_run_time_as_best_run_time(config, persistent_data_path):
-	config.set_value("metrics", "best_run_time", global.robert_time)
-	if (config.save(persistent_data_path) != OK):
+	if (persistent_data.get_value("metrics", "best_run_time") != null):
+		if (float(persistent_data.get_value("metrics", "best_run_time")) < global.robert_time):
+			return
+	
+	persistent_data.set_value("metrics", "best_run_time", global.robert_time)
+	if (persistent_data.save(persistent_data_path) != OK):
 		print("Failed to save this run's time.")
